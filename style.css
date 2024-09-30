@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+li {
+  border: 1px solid black;
+  padding: 10px 20px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+li:hover {
+  border: 1px solid red;
+}
+li:active {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a:focus {
+  background-color: green;
+}
+section {
+  height: 100vh;
+}
+ul a:nth-child(odd) {
+  color: grey;
+}
+section:nth-child(odd) {
+  background-color: rgb(192, 192, 85);
+}
+li::before {
+  content: ">>";
+}
+@media only screen and (max-width: 700px) {
+  ul {
+    flex-direction: column;
+    gap: 2px;
+  }
+  li {
+    padding: 5px 2px;
+  }
+}
